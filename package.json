@@ -9,7 +9,7 @@
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",
-    "deploy": "VITE_APP_BASE_PATH=/seu-repositorio-aqui npm run build && gh-pages -d dist"
+    "deploy": "VITE_APP_BASE_PATH=/SITE_SSO3/ npm run build && gh-pages -d dist"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
