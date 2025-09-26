@@ -11,7 +11,7 @@ const Navbar = () => {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 items-center justify-between">
         <Link to="/" className="mr-6 flex items-center space-x-2">
-          <span className="font-bold text-lg">SSO3</span>
+          <img src="/LOGO SSO3 - OFICIAL - pequeno.png" alt="SSO3 Logo" className="h-8" />
         </Link>
         <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
           <Link to="/">Home</Link>

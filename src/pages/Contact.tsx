@@ -18,7 +18,7 @@ const Contact = () => {
 
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-4xl mx-auto">
         <Card className="flex flex-col items-center p-6 text-center">
-          <MapPin className="h-12 w-12 text-blue-600 mb-4" />
+          <MapPin className="h-12 w-12 text-primary mb-4" />
           <CardTitle className="mb-2">Endereço</CardTitle>
           <CardContent className="text-muted-foreground p-0">
             <p>Rua Dr. Orestes Prata Tibery, 2240</p>
@@ -28,7 +28,7 @@ const Contact = () => {
         </Card>
 
         <Card className="flex flex-col items-center p-6 text-center">
-          <Phone className="h-12 w-12 text-blue-600 mb-4" />
+          <Phone className="h-12 w-12 text-primary mb-4" />
           <CardTitle className="mb-2">Telefone / WhatsApp</CardTitle>
           <CardContent className="text-muted-foreground p-0">
             <p>(18) 99723-7297</p>
@@ -37,7 +37,7 @@ const Contact = () => {
         </Card>
 
         <Card className="flex flex-col items-center p-6 text-center">
-          <Mail className="h-12 w-12 text-blue-600 mb-4" />
+          <Mail className="h-12 w-12 text-primary mb-4" />
           <CardTitle className="mb-2">Email</CardTitle>
           <CardContent className="text-muted-foreground p-0">
             <p>contato@sso3.com.br (Exemplo)</p>

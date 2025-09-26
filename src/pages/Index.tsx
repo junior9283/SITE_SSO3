@@ -10,7 +10,7 @@ const Index = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <main className="flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-r from-primary to-accent text-primary-foreground">
           <div className="container px-4 md:px-6 text-center">
             <div className="space-y-4">
               <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
@@ -21,12 +21,12 @@ const Index = () => {
               </p>
               <div className="space-x-4">
                 <Link to="/services">
-                  <Button size="lg" className="bg-white text-blue-800 hover:bg-gray-100">
+                  <Button size="lg" className="bg-primary-foreground text-primary hover:bg-gray-100">
                     Nossos Serviços
                   </Button>
                 </Link>
                 <Link to="/contact">
-                  <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-800">
+                  <Button size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
                     Entre em Contato
                   </Button>
                 </Link>
@@ -48,42 +48,42 @@ const Index = () => {
               </div>
               <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                 <Card className="flex flex-col items-center p-6 text-center">
-                  <ShieldCheck className="h-12 w-12 text-blue-600 mb-4" />
+                  <ShieldCheck className="h-12 w-12 text-primary mb-4" />
                   <CardTitle className="mb-2">Apoio Técnico Especializado</CardTitle>
                   <CardDescription>
                     Suporte em processos trabalhistas, análise de laudos e acompanhamento de perícias.
                   </CardDescription>
                 </Card>
                 <Card className="flex flex-col items-center p-6 text-center">
-                  <AirVent className="h-12 w-12 text-blue-600 mb-4" />
+                  <AirVent className="h-12 w-12 text-primary mb-4" />
                   <CardTitle className="mb-2">Elaboração de PMOC</CardTitle>
                   <CardDescription>
                     Plano de Manutenção, Operação e Controle para ambientes climatizados.
                   </CardDescription>
                 </Card>
                 <Card className="flex flex-col items-center p-6 text-center">
-                  <Stethoscope className="h-12 w-12 text-blue-600 mb-4" />
+                  <Stethoscope className="h-12 w-12 text-primary mb-4" />
                   <CardTitle className="mb-2">PCMSO / Saúde Ocupacional</CardTitle>
                   <CardDescription>
                     Avaliação de riscos, exames médicos e implementação de medidas preventivas.
                   </CardDescription>
                 </Card>
                 <Card className="flex flex-col items-center p-6 text-center">
-                  <FileText className="h-12 w-12 text-blue-600 mb-4" />
+                  <FileText className="h-12 w-12 text-primary mb-4" />
                   <CardTitle className="mb-2">PGR - Gerenciamento de Riscos</CardTitle>
                   <CardDescription>
                     Implementação do Programa de Gerenciamento de Riscos (PGR) conforme NR1.
                   </CardDescription>
                 </Card>
                 <Card className="flex flex-col items-center p-6 text-center">
-                  <ClipboardList className="h-12 w-12 text-blue-600 mb-4" />
+                  <ClipboardList className="h-12 w-12 text-primary mb-4" />
                   <CardTitle className="mb-2">Laudos Técnicos</CardTitle>
                   <CardDescription>
                     Laudos de Insalubridade e Periculosidade para conformidade legal.
                   </CardDescription>
                 </Card>
                 <Card className="flex flex-col items-center p-6 text-center">
-                  <Users className="h-12 w-12 text-blue-600 mb-4" />
+                  <Users className="h-12 w-12 text-primary mb-4" />
                   <CardTitle className="mb-2">Treinamentos NR's</CardTitle>
                   <CardDescription>
                     Capacitação obrigatória em diversas Normas Regulamentadoras.
