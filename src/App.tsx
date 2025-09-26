@@ -22,7 +22,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename={import.meta.env.VITE_APP_BASE_PATH || "/"}>
         <SessionContextProvider>
           <div className="flex flex-col min-h-screen">
             <Navbar />
