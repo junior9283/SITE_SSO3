@@ -2,6 +2,7 @@
 
 import React from "react";
 import { MadeWithDyad } from "./made-with-dyad";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -17,6 +18,9 @@ const Footer = () => {
           <p className="text-sm text-muted-foreground">
             Rua Dr. Orestes Prata Tibery, 2240, Bairro Jardim Primaveril, CEP 79603-030.
           </p>
+          <Link to="/admin" className="text-xs text-muted-foreground hover:underline mt-2 block">
+            Área Administrativa
+          </Link>
         </div>
         <MadeWithDyad />
       </div>

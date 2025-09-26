@@ -1,12 +1,34 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ShieldCheck, AirVent, Stethoscope, FileText, ClipboardList, Users } from "lucide-react";
+import { supabase } from '@/integrations/supabase/client';
+
+interface NewsItem {
+  id: string;
+  created_at: string;
+  title: string;
+  content: string;
+}
 
 const Index = () => {
+  const [news, setNews] = useState<NewsItem[]>([]);
+
+  useEffect(() => {
+    const fetchNews = async () => {
+      const { data, error } = await supabase.from('news').select('*').order('created_at', { ascending: false }).limit(3);
+      if (error) {
+        console.error("Erro ao buscar notícias:", error);
+      } else {
+        setNews(data || []);
+      }
+    };
+    fetchNews();
+  }, []);
+
   return (
     <div className="flex flex-col min-h-screen">
       <main className="flex-1">
@@ -93,6 +115,37 @@ const Index = () => {
             </div>
           </div>
         </section>
+
+        {news.length > 0 && (
+          <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
+            <div className="container px-4 md:px-6">
+              <div className="flex flex-col items-center justify-center space-y-8 text-center">
+                <div className="space-y-2">
+                  <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                    Últimas Notícias
+                  </h2>
+                  <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                    Fique por dentro das novidades e informações importantes sobre segurança e saúde ocupacional.
+                  </p>
+                </div>
+                <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                  {news.map((item) => (
+                    <Card key={item.id}>
+                      <CardHeader>
+                        <CardTitle>{item.title}</CardTitle>
+                        <p className="text-sm text-muted-foreground">Publicado em: {new Date(item.created_at).toLocaleDateString()}</p>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-muted-foreground">{item.content.substring(0, 150)}...</p>
+                        {/* Adicionar link para ver a notícia completa se houver uma página de detalhes */}
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
       </main>
     </div>
   );
