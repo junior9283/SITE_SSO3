@@ -9,6 +9,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger, DialogFooter } from '@/components/ui/dialog';
 import { useToast } from '@/hooks/use-toast';
 import { Trash2, Edit } from 'lucide-react';
+import { useSession } from '@/components/SessionContextProvider'; // Importação adicionada
 
 interface NewsItem {
   id: string;
